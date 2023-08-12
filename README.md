@@ -1,4 +1,4 @@
-# frontend
+# FreakTheBand!
 
 ## Project setup
 ```
