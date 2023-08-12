@@ -36,7 +36,7 @@ var data;
     name: 'RockSessionPage',
     methods: {
       getResponse() {
-            const path = 'http://freakapi.azurewebsites.net/rocksession';
+            const path = 'https://freakapi.azurewebsites.net/rocksession';
             axios.get(path)
                 .then((res) => {
                 data = res.data;

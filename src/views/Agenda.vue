@@ -149,7 +149,7 @@ export default {
         document.getElementById("eventdescription").innerHTML = '';
       },
       getResponse() {
-            const path = 'http://freakapi.azurewebsites.net/events';
+            const path = 'https://freakapi.azurewebsites.net/events';
             axios.get(path)
                 .then((res) => {
                 data = res.data;
