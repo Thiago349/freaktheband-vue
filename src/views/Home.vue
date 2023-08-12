@@ -17,7 +17,7 @@
     name: 'HomePage',
     methods: {
         getResponse() {
-            const path = 'http://localhost:5000/news';
+            const path = 'http://freakapi.azurewebsites.net/news';
             axios.get(path)
                 .then((res) => {
                 var data = res.data;
