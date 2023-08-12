@@ -1,32 +1,69 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+    <div id="app">
+      <TopBar></TopBar>
+      <div id="main-div">
+        <router-view/>
+      </div>
+    </div>
 </template>
 
+<script>
+  import TopBar from './components/TopBar.vue';
+
+  export default {
+    components: { TopBar }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --light: #CAE8FF;
+  --dark: #050a30;
+  --ice: #e2e8f0;
+  --dark-grey: #010101;
 }
 
-nav {
-  padding: 30px;
+body {
+  background: radial-gradient(circle, rgba(5,10,48,1) 25%, rgba(1,1,1,1) 100%);
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+h1 {
+  font-size: 40px !important;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+h2 {
+  font-size: 32px !important;
+}
+
+h3 {
+  font-size: 24px !important; 
+}
+
+p {
+  font-size: 16px !important;
+}
+
+#main-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 44px !important;
+  }
+
+  h2 {
+    font-size: 36px !important;
+  }
+
+  h3 {
+    font-size: 28px !important; 
+  }
+
+  p {
+    font-size: 20px !important;
+  }
 }
 </style>
