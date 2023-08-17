@@ -64,16 +64,21 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
         },
       change_event(event) {
         if (chosen_rs != ""){
-          document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ styles.getPropertyValue('--dark') }`;
+          document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ styles.getPropertyValue('--dark-grey') }`;
         }
         var rs_number = event.target.parentNode.id;
         chosen_rs = rs_number;
         document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ styles.getPropertyValue('--ice') }`;
         document.getElementById("rs-logo").src = require("@/assets/RS/" + rs_number + ".svg");
-        const class_elements = document.getElementsByClassName("topics");
         document.getElementById("display-info").style.backgroundColor = rs_colors[rs_number][0];
+        document.getElementById("display-info").style.borderColor = rs_colors[rs_number][1];
+        var class_elements = document.getElementsByClassName("topics");
         for (var class_ind = 0; class_ind < class_elements.length; class_ind++) {
           class_elements[class_ind].style.color = rs_colors[rs_number][1];
+        }
+        class_elements = document.getElementsByClassName("info-box");
+        for (class_ind = 0; class_ind < class_elements.length; class_ind++) {
+          class_elements[class_ind].style.borderColor = rs_colors[rs_number][1];
         }
         rs_number = Number(rs_number.replace("RS", "")) - 1;
         console.log(data[rs_number]);
@@ -150,7 +155,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
 }
 
 .rs-button {
-  border: solid var(--dark) 2px;
+  border: solid var(--dark-grey) 2px;
   border-radius: 15px;
   width: 100%;
   height: 100%;
@@ -165,7 +170,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
 }
 
 .button-div:hover > .rs-button {
-  border: solid var(--ice) 2px;
+  border: solid var(--ice) 2px !important;
 }
 
 .info-box {
@@ -253,16 +258,19 @@ img {
 .scrollable {
   overflow-x: hidden;
   overflow-y: auto;
+  margin-left: 15px;
 }
 
 ::-webkit-scrollbar {
-  width: 0.5em;
-  background-color: var(--ice);
+  width: 15px;
+  background-color: var(--dark-grey);
+  border-radius: 0.5px;
 }
 
 /* Make scrollbar visible when needed */
 ::-webkit-scrollbar-thumb {
   background-color: var(--dark-grey);
+  border: solid 2px var(--ice);
 }
 
 @media (max-width: 1100px) {
@@ -340,18 +348,21 @@ img {
     .scrollable {
       overflow-x: auto;
       overflow-y: hidden;
+      margin-top: 10px;
       margin-bottom: 10px;
     }
 
     ::-webkit-scrollbar {
-      width: 0.5em;
-      background-color: var(--ice);
+      height: 15px;
+      background-color: var(--dark-grey);
+      border-radius: 0.5px;
+
     }
 
     /* Make scrollbar visible when needed */
     ::-webkit-scrollbar-thumb {
       background-color: var(--dark-grey);
+      border: solid 2px var(--ice);
     }
-
 }
 </style>
