@@ -251,7 +251,7 @@ function update_dates(data, year, month) {
 #prevyear,
 #nextyear {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -351,18 +351,18 @@ ul button {
   }
 
   .calendar {
-    width: 70vw;
+    width: 90vw;
     height: auto;
     margin: 20px auto;
   }
   .calendarheader {
-    height: 7vw;
+    height: 10vw;
   }
 
   ul button, .weekdays, #prevmonth, #nextmonth, #prevyear, #nextyear {
-    width: 5vw;
-    height: 5vw;
-    margin: 2vw;
+    width: 10vw;
+    height: 10vw;
+    margin: 0.5vw;
   }
 }
 </style>

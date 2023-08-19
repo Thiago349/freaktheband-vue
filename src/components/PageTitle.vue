@@ -66,6 +66,7 @@
   @media (max-width: 1100px) {
     #PageTitle {
       height: fit-content;
+      width: 90vw;
       margin: 20px auto;
     }
 
