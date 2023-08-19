@@ -160,18 +160,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   height: 100%;
 }
 
-.button-div:hover {
-  padding: 1.25px;
-}
-
-.button-div:active {
-  padding: 5px;
-}
-
-.button-div:hover > .rs-button {
-  border: solid var(--ice) 2px !important;
-}
-
 .info-box {
   display: flex;
   flex-direction: column;
@@ -208,10 +196,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   height: 100%;
 }
 
-#band-insta:hover, #guest-insta:hover {
-  border: solid var(--light) 2px;
-  background-color: var(--dark);
-}
 
 .info-box h3 {
   color: var(--light);
@@ -272,11 +256,30 @@ img {
   border: solid 2px var(--ice);
 }
 
+@media (min-width:1100px) {
+  #band-insta:hover, #guest-insta:hover {
+    border: solid var(--light) 2px;
+    background-color: var(--dark);
+  }
+
+  .button-div:hover {
+    padding: 1.25px;
+  }
+
+  .button-div:active {
+    padding: 5px;
+  }
+
+  .button-div:hover > .rs-button {
+    border: solid var(--ice) 2px !important;
+  }
+}
+
 @media (max-width: 1100px) {
   #content-wrapper {
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: space-between;
         padding: 10px;
         width: 95vw;
         height: fit-content;
