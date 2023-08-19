@@ -356,6 +356,7 @@ ul button {
   }
   .calendarheader {
     height: 10vw;
+    margin: 0.5vw;
   }
   ul button, .weekdays, #prevmonth, #nextmonth, #prevyear, #nextyear {
     width: 10vw;

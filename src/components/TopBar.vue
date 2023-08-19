@@ -1,20 +1,47 @@
 <template>
   <div id="TopBar">
     <ul>
-      <img id="menu-img" src="../assets/menudark.svg">
-      <li><router-link id='home' to='/home' class="btn btn-top-bar">Home</router-link></li>
-      <li><router-link id='agenda' to='/agenda' class="btn btn-top-bar">Agenda</router-link></li>
-      <li><router-link id='rocksession' to='/rocksession' class="btn btn-top-bar">Rock Session</router-link></li>
-      <li><router-link id='musicas' to='/musicas' class="btn btn-top-bar">Músicas</router-link></li>
-      <li><router-link ide='contato' to='/contato' class="btn btn-top-bar">Contato</router-link></li>
+      <img @click="activate_bar" id="menu-img" src="../assets/menudark.svg">
+      <li @click="activate_bar"><router-link  id='home' to='/home' class="btn btn-top-bar">Home</router-link></li>
+      <li @click="activate_bar"><router-link  id='agenda' to='/agenda' class="btn btn-top-bar">Agenda</router-link></li>
+      <li @click="activate_bar"><router-link  id='rocksession' to='/rocksession' class="btn btn-top-bar">Rock Session</router-link></li>
+      <li @click="activate_bar"><router-link  id='musicas' to='/musicas' class="btn btn-top-bar">Músicas</router-link></li>
+      <li @click="activate_bar"><router-link  ide='contato' to='/contato' class="btn btn-top-bar">Contato</router-link></li>
       <img id="logo-img" src="../assets/logo.svg">
     </ul>
   </div>
 </template>
 
 <script>
+const styles = getComputedStyle(document.documentElement);
+var class_elements
+var class_ind
+var activated = 0
+
   export default {
     name: 'TopBar',
+    methods: {
+      activate_bar(){
+        if (window.innerWidth < 1100) {
+          if (activated == 0) {
+            document.getElementById("menu-img").style.backgroundColor = styles.getPropertyValue('--dark');
+            class_elements = document.getElementsByClassName("btn-top-bar");
+            for (class_ind = 0; class_ind < class_elements.length; class_ind++) {
+              class_elements[class_ind].style.display = "flex";
+            }
+            activated = 1;
+          }
+          else {
+            document.getElementById("menu-img").style.backgroundColor = styles.getPropertyValue('--dark-grey');
+            class_elements = document.getElementsByClassName("btn-top-bar");
+            for (class_ind = 0; class_ind < class_elements.length; class_ind++) {
+              class_elements[class_ind].style.display = "none";
+            }
+            activated = 0;
+          }
+        }
+      }
+    }
   }
 </script>
 
@@ -72,8 +99,6 @@
     transition: 0.2s;
   }
 
-  
-
   @media (min-width:1100px) {
     .btn-top-bar:hover {
       background-color: var(--light);
@@ -110,22 +135,18 @@
     ul {
       flex-direction: column;
     }
-    
-    div ul:hover >  #menu-img {
-      padding: 5px;
-    }
-
-    div ul:hover > li {
-      height: 10vh;
-    }
 
     li {
-      height: 0;
+      height: fit-content;
       width: 100%;
     }
 
     #logo-img {
       display: none;
+    }
+
+    .btn-top-bar {
+      height: 10vh;
     }
   }
 </style>
