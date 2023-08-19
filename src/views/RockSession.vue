@@ -81,7 +81,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
           class_elements[class_ind].style.borderColor = rs_colors[rs_number][1];
         }
         rs_number = Number(rs_number.replace("RS", "")) - 1;
-        console.log(data[rs_number]);
         document.getElementById("event-description").innerHTML = data[rs_number][1];
         document.getElementById("band-logo").src = require("@/assets/RS/" + data[rs_number][2] + ".png");
         document.getElementById("band-description").innerHTML = data[rs_number][3];
