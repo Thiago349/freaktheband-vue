@@ -324,7 +324,7 @@ ul button {
   color: var(--ice);
   font-size: 16px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25%;
   width: 40px;
   height: 40px;
   margin: 10px;
@@ -341,7 +341,7 @@ ul button {
 #eventname, #eventdescription {
   text-align: left;
   color: var(--ice);
-  margin:20px;
+  margin: 20px;
 }
 @media (max-width: 1100px) {
   .content-wrapper {
@@ -356,7 +356,6 @@ ul button {
   }
   .calendarheader {
     height: 10vw;
-    margin: 0.5vw;
   }
   ul button, .weekdays, #prevmonth, #nextmonth, #prevyear, #nextyear {
     width: 10vw;
