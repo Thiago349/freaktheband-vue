@@ -72,6 +72,7 @@
     #align-title, #subtitle {
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
   }
 </style>

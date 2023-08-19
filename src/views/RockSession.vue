@@ -332,7 +332,7 @@ img {
       height: 25vw;
     }
 
-    #rs-logo {
+    #rs-logo, #guest-logo, #band-logo {
       display: none;
     }
 

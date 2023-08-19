@@ -49,21 +49,4 @@ p {
   width: 100%;
 }
 
-@media (max-width: 1100px) {
-  h1 {
-    font-size: 44px !important;
-  }
-
-  h2 {
-    font-size: 36px !important;
-  }
-
-  h3 {
-    font-size: 28px !important; 
-  }
-
-  p {
-    font-size: 20px !important;
-  }
-}
 </style>
