@@ -65,11 +65,12 @@
 
   @media (max-width: 1100px) {
     #PageTitle {
-      height: 10vh;
+      height: fit-content;
       margin: 20px auto;
     }
 
     #align-title, #subtitle {
+      flex-direction: column;
       justify-content: center;
     }
   }

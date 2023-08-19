@@ -10,7 +10,7 @@
         </div>
         <div class="calendarheader">
           <button id = "prevmonth" @click="change_month">&lt;</button>
-          <h3 id = "calendarmonth">Julho</h3>
+          <h3 id = "calendarmonth">Agosto</h3>
           <button id = "nextmonth" @click="change_month">&gt;</button>
         </div>
         <ul>
@@ -345,14 +345,24 @@ ul button {
 }
 @media (max-width: 1100px) {
   .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .calendar {
-        height: auto;
-        margin: 20px auto;
-    }
+  .calendar {
+    width: 70vw;
+    height: auto;
+    margin: 20px auto;
+  }
+  .calendarheader {
+    height: 7vw;
+  }
+
+  ul button, .weekdays, #prevmonth, #nextmonth, #prevyear, #nextyear {
+    width: 5vw;
+    height: 5vw;
+    margin: 2vw;
+  }
 }
 </style>
