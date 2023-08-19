@@ -68,7 +68,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
         }
         var rs_number = event.target.parentNode.id;
         chosen_rs = rs_number;
-        document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ styles.getPropertyValue('--ice') }`;
+        document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ rs_colors[rs_number][1] }`;
         document.getElementById("rs-logo").src = require("@/assets/RS/" + rs_number + ".svg");
         document.getElementById("display-info").style.backgroundColor = rs_colors[rs_number][0];
         document.getElementById("display-info").style.borderColor = rs_colors[rs_number][1];
@@ -278,6 +278,7 @@ img {
         flex-direction: column-reverse;
         justify-content: center;
         padding: 10px;
+        width: 95vw;
         height: fit-content;
     }
 
@@ -311,7 +312,7 @@ img {
       flex-direction: row;
       width: 100%;
       height: fit-content;
-      padding: 0px;
+      margin: 10px;
     }
 
     .button-div {
@@ -348,8 +349,6 @@ img {
     .scrollable {
       overflow-x: auto;
       overflow-y: hidden;
-      margin-top: 10px;
-      margin-bottom: 10px;
     }
 
     ::-webkit-scrollbar {

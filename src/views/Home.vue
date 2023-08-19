@@ -88,12 +88,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 95vw;
+        margin: auto;
     }
 
     #main-img, #news {
-        width: 90%;
+        width: 100%;
         height: auto;
-        margin: 20px auto;
+        margin-bottom: 20px;
     }
 }
 </style>

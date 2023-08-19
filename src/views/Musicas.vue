@@ -59,7 +59,7 @@ const styles = getComputedStyle(document.documentElement);
     background-color: var(--dark-grey);
     border: solid var(--ice) 2px;
     border-radius: 15px;
-    width: 90vw;
+    width: 95vw;
     margin: auto;
     margin-bottom: 0%;
     padding: 10px;
@@ -139,7 +139,7 @@ const styles = getComputedStyle(document.documentElement);
     }
 
     #display-music {
-      margin: auto;
+      margin: 0;
     }
 
     #display-buttons {

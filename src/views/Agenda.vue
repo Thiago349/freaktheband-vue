@@ -352,7 +352,7 @@ ul button {
   .calendar {
     width: 90vw;
     height: auto;
-    margin: 20px auto;
+    margin: 0px auto 20px auto;
   }
   .calendarheader {
     height: 10vw;
