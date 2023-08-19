@@ -349,7 +349,6 @@ ul button {
     flex-direction: column;
     justify-content: center;
   }
-
   .calendar {
     width: 90vw;
     height: auto;
@@ -358,8 +357,8 @@ ul button {
   .calendarheader {
     height: 10vw;
   }
-
   ul button, .weekdays, #prevmonth, #nextmonth, #prevyear, #nextyear {
+    border: solid 2vw transparent;
     width: 10vw;
     height: 10vw;
     margin: 0.5vw;

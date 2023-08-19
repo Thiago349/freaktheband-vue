@@ -37,10 +37,6 @@
     transition: 0.1s;
   }
 
-  #menu-img:hover {
-    background-color: var(--dark);
-  }
-
   ul {
     display: flex;
     flex-direction: row;
@@ -61,18 +57,6 @@
     height: 100%;
   }
 
-  div ul:hover >  li  > .btn-top-bar{
-    display: flex;
-  }
-
-  div ul:hover >  #menu-img {
-    padding: 2px;
-  }
-
-  div ul:hover > #logo-img {
-    padding: 2px;
-  }
-
   .btn-top-bar {
     display: none;
     flex-direction: column;
@@ -88,11 +72,30 @@
     transition: 0.2s;
   }
 
-  .btn-top-bar:hover {
-    background-color: var(--light);
-    color: var(--dark);
-    border-color: var(--light);
-    font-size: 28px;
+  
+
+  @media (min-width:1100px) {
+    .btn-top-bar:hover {
+      background-color: var(--light);
+      color: var(--dark);
+      border-color: var(--light);
+      font-size: 28px;
+    }
+    div ul:hover >  li  > .btn-top-bar{
+      display: flex;
+    }
+
+    div ul:hover >  #menu-img {
+      padding: 2px;
+    }
+
+    div ul:hover > #logo-img {
+      padding: 2px;
+    }
+
+    #menu-img:hover {
+      background-color: var(--dark);
+    }
   }
 
   @media (max-width: 1100px) {
