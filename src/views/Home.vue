@@ -1,5 +1,5 @@
 <template>
-  <div id="Home">
+  <div class="main-view" id="Home">
     <PageTitle struct="Bem-vindo ao site da" distinguished="FREAK!" description="Saiba mais sobre o quarteto de Rock N' Roll belo-horizontino!"></PageTitle>
     <div class="content-wrapper">  
         <img id="main-img" src="../assets/main_img.jpeg">
@@ -41,16 +41,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#Home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-}
-
 .content-wrapper {
-    display: flex;
     flex-direction: row;
     justify-content: center;
 }
@@ -95,6 +86,9 @@
     #main-img, #news {
         width: 100%;
         height: auto;
+    }
+
+    #main-img {
         margin-bottom: 20px;
     }
 }

@@ -1,7 +1,7 @@
 <template>
-  <div id="RockSession">
+  <div class="main-view" id="RockSession">
     <PageTitle struct="Conheça o" distinguished="ROCK SESSION!" description="Descubra o que é o nosso evento e como foram as edições anteriores!"></PageTitle>
-    <div id="content-wrapper">
+    <div class="content-wrapper">
       <div id="display-info">
         <div id="description" class="info-box">
           <h3 class="topics">SOBRE</h3>
@@ -105,20 +105,16 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   width: 100%;
 }
 
-#content-wrapper {
+.content-wrapper {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--dark-grey);
-  border: solid var(--ice) 2px;
-  border-radius: 15px;
   width: 90vw;
-  min-height: 95vh;
   margin: auto;
   margin-bottom: 0%;
-  padding: 2.5vh;
+  padding-top: 0px;
 }
 
 #display-info {
@@ -196,7 +192,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   height: 100%;
 }
 
-
 .info-box h3 {
   color: var(--light);
   height: fit-content;
@@ -246,14 +241,15 @@ img {
 
 ::-webkit-scrollbar {
   width: 15px;
-  background-color: var(--dark-grey);
-  border-radius: 0.5px;
+  background-color: var(--ice);
+  border-radius: 5px;
 }
 
 /* Make scrollbar visible when needed */
 ::-webkit-scrollbar-thumb {
   background-color: var(--dark-grey);
-  border: solid 2px var(--ice);
+  border: solid var(--ice) 2px;
+  border-radius: 5px;
 }
 
 @media (min-width:1100px) {
@@ -263,26 +259,19 @@ img {
   }
 
   .button-div:hover {
-    padding: 1.25px;
+    padding: 0px;
   }
 
   .button-div:active {
     padding: 5px;
   }
-
-  .button-div:hover > .rs-button {
-    border: solid var(--ice) 2px !important;
-  }
 }
 
 @media (max-width: 1100px) {
-  #content-wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        padding: 10px;
-        width: 95vw;
-        height: fit-content;
+  .content-wrapper {
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      height: fit-content;
     }
 
     #description, #guests {
@@ -316,6 +305,8 @@ img {
       width: 100%;
       height: fit-content;
       margin: 10px;
+      margin-top: 0px;
+      padding: 0px;
     }
 
     .button-div {
@@ -356,7 +347,7 @@ img {
 
     ::-webkit-scrollbar {
       height: 15px;
-      background-color: var(--dark-grey);
+      background-color: var(--ice);
       border-radius: 0.5px;
 
     }
@@ -365,6 +356,7 @@ img {
     ::-webkit-scrollbar-thumb {
       background-color: var(--dark-grey);
       border: solid 2px var(--ice);
+      border-radius: 0.5px;
     }
 }
 </style>

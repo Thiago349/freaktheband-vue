@@ -52,7 +52,7 @@ var activated = 0
     flex-direction: row;
     align-items: center;
     background-color: var(--dark-grey);
-    border-bottom: solid var(--light) 2px;
+    border-bottom: solid var(--ice) 2px;
     width: 100%;
     height: 10vh;
   }
@@ -101,11 +101,16 @@ var activated = 0
 
   @media (min-width:1100px) {
     .btn-top-bar:hover {
-      background-color: var(--light);
-      color: var(--dark);
-      border-color: var(--light);
+      color: var(--light);
       font-size: 28px;
     }
+
+    .btn-top-bar:active {
+      border-color: var(--light);
+      color: var(--light);
+      font-size: 28px;
+    }
+
     div ul:hover >  li  > .btn-top-bar{
       display: flex;
     }
@@ -116,10 +121,6 @@ var activated = 0
 
     div ul:hover > #logo-img {
       padding: 2px;
-    }
-
-    #menu-img:hover {
-      background-color: var(--dark);
     }
   }
 

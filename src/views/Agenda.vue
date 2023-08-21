@@ -1,8 +1,8 @@
 <template>
-  <div id="Agenda">
+  <div class="main-view" id="Agenda">
     <PageTitle struct="Confira nossa" distinguished="AGENDA!" description="Fique por dentro de todos os próximos eventos da banda!"></PageTitle>
     <div class="content-wrapper">
-      <div class="calendar">
+      <div id="dates" class="calendar">
         <div class="calendarheader">
           <button id = "prevyear" @click="change_year">&lt;</button>
           <h3 id = "calendaryear">2023</h3>
@@ -260,10 +260,11 @@ function update_dates(data, year, month) {
   font-size: 24px;
   font-weight: bolder;
   border: 2px solid transparent;
-  border-radius: 20px;
+  border-radius: 25%;
   width: 40px;
   height: 40px;
   margin: auto 10px;
+  padding: 0%;
 }
 
 ul button:hover,
@@ -352,7 +353,7 @@ ul button {
   .calendar {
     width: 90vw;
     height: auto;
-    margin: 0px auto 20px auto;
+    margin: 0px auto;
   }
   .calendarheader {
     height: 10vw;
@@ -361,6 +362,10 @@ ul button {
     width: 10vw;
     height: 10vw;
     margin: 0.5vw;
+  }
+
+  #dates {
+    margin-bottom: 20px;;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div id="Musicas">
+  <div class="main-view" id="Musicas">
     <PageTitle struct="Nossas músicas" distinguished="AUTORAIS!" description="Leia a letra de todas as músicas da banda!"></PageTitle>
-    <div id="content-wrapper">
+    <div class="content-wrapper">
       <div class="scrollable" id="display-buttons">
         <div class="button-div" v-for="music, index in musics" :key="index" >
           <button @click="change_music" class="btn music-btn" v-bind:id="music"> {{ music }} </button>
@@ -51,23 +51,16 @@ const styles = getComputedStyle(document.documentElement);
     width: 100%;
   }
 
-  #content-wrapper {
-    display: flex;
+  .content-wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    background-color: var(--dark-grey);
-    border: solid var(--ice) 2px;
-    border-radius: 15px;
-    width: 95vw;
-    margin: auto;
-    margin-bottom: 0%;
-    padding: 10px;
+    margin: 0 1.25vw;
   }
 
   .music-btn {
     border: solid var(--light) 2px;
-    border-radius: 15px;
+    border-radius: 10%;
     background-color: var(--dark-grey);
     color: var(--light);
     font-size: 28px;
@@ -117,8 +110,8 @@ const styles = getComputedStyle(document.documentElement);
     border: solid var(--light) 2px;
     border-radius: 15px;
     width: 100%;
-    min-height: calc(70vh - 40px);
-    margin: 20px 10px;
+    min-height: 70vh;
+    margin: 0px 10px;
   }
 
   #music-image {
@@ -133,7 +126,7 @@ const styles = getComputedStyle(document.documentElement);
   }
 
   @media (max-width: 1100px) {
-    #content-wrapper {
+    .content-wrapper {
       flex-direction: column;
       align-items: center;
     }
