@@ -91,18 +91,6 @@ const styles = getComputedStyle(document.documentElement);
     overflow-y: auto;
   }
 
-  ::-webkit-scrollbar {
-    width: 15px;
-    background-color: var(--dark-grey);
-    border-radius: 0.5px;
-  }
-
-  /* Make scrollbar visible when needed */
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dark-grey);
-    border: solid 2px var(--ice);
-  }
-
   #display-music {
     display: flex;
     justify-content: center;
@@ -126,6 +114,10 @@ const styles = getComputedStyle(document.documentElement);
   }
 
   @media (max-width: 1100px) {
+    .main-view {
+      justify-content: start;
+    }
+
     .content-wrapper {
       flex-direction: column;
       align-items: center;
@@ -133,6 +125,7 @@ const styles = getComputedStyle(document.documentElement);
 
     #display-music {
       margin: 0;
+      min-height: 20vh;
     }
 
     #display-buttons {

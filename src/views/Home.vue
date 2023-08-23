@@ -50,7 +50,7 @@
     border: solid var(--ice) 2px;
     border-radius: 15px;
     width: auto;
-    height: 70vh;
+    height: 67.5vh;
     margin: 0 2.5vh;
 }
 
@@ -60,7 +60,7 @@
     background-color: var(--dark-grey);
     border: solid var(--ice) 2px;
     border-radius: 15px;
-    height: 70vh;
+    height: 67.5vh;
     margin: 0 2.5vh;
     padding: 10px;
 }

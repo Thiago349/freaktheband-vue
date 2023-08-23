@@ -51,6 +51,8 @@ p, input {
 }
 
 .main-view {
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,17 +63,29 @@ p, input {
   border: 2px solid var(--ice);
   border-top: none;
   width: 95vw;
-  min-height: 87.5vh;
+  height: 85vh;
   margin: 0 2.5vw;
   margin-bottom: 2.5vh;
 }
 
 .content-wrapper {
+  box-sizing: border-box;
   display: flex;
-  min-height: 72.5vh;
-  padding-bottom: 2.5vh;
+  padding-bottom: calc(2.5vh - 2px);
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Make scrollbar visible when needed */
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grey);
+  border: solid var(--ice) 2px;
+  border-radius: 5px;
+}
 @media (max-width: 1100px) {
   .content-wrapper {
     padding: 2.5vw;

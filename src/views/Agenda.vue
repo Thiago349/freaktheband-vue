@@ -228,8 +228,8 @@ function update_dates(data, year, month) {
   background-color: var(--dark-grey);
   border: var(--ice) solid 2px;
   border-radius: 25px;
-  width: 500px;
-  padding: 10px;
+  width: 60vh;
+  padding: 2vh;
   margin: 0px 20px;
 }
 .calendar h3,
@@ -243,7 +243,7 @@ function update_dates(data, year, month) {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  height: 50px;
+  height: 7vh;
 }
 
 #prevmonth,
@@ -261,9 +261,9 @@ function update_dates(data, year, month) {
   font-weight: bolder;
   border: 2px solid transparent;
   border-radius: 25%;
-  width: 40px;
-  height: 40px;
-  margin: auto 10px;
+  width: 7vh;
+  height: 7vh;
+  margin: auto 0.25vh;
   padding: 0%;
 }
 
@@ -311,9 +311,9 @@ ul button:hover,
   color: var(--ice);
   font-weight: bolder;
   border: none;
-  width: 40px;
-  height: 40px;
-  margin: 10px;
+  width: 7vh;
+  height: 7vh;
+  margin: auto 0.2vh;
 }
 
 ul button {
@@ -326,9 +326,9 @@ ul button {
   font-size: 16px;
   border: none;
   border-radius: 25%;
-  width: 40px;
-  height: 40px;
-  margin: 10px;
+  width: 7vh;
+  height: 7vh;
+  margin: auto 0.2vh;
 }
 
 .notcurrent {

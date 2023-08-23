@@ -67,7 +67,7 @@
     #PageTitle {
       height: fit-content;
       width: 90vw;
-      margin: 20px auto;
+      margin: 50px auto;
     }
 
     #align-title, #subtitle {
