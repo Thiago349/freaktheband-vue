@@ -6,7 +6,7 @@
         <InputText label_text="Nome" id_name="name"></InputText>
         <InputText label_text="E-mail" id_name="email"></InputText>
         <InputText label_text="Assunto" id_name="subject"></InputText>
-        <InputTextArea label_text="Mensagem" id_name="email_content"></InputTextArea>
+        <InputTextArea label_text="Mensagem" id_name="content"></InputTextArea>
         <SubmitButton label_text="Enviar"></SubmitButton>
       </form>
     <div class="contact-display">
@@ -32,7 +32,7 @@ import SubmitButton from '../components/SubmitButton.vue';
     components: { PageTitle, InputText, InputTextArea, SubmitButton },
     methods: { sendForm(event) {
       event.preventDefault();
-      this.email_info = { name: document.getElementById("name").value, email: document.getElementById("email").value, subject: document.getElementById("subject").value, email_content: document.getElementById("email_content").value}
+      this.email_info = { name: document.getElementById("name").value, email: document.getElementById("email").value, subject: document.getElementById("subject").value, content: document.getElementById("content").value}
       console.log(this.email_info);
       axios.post("https://freakapi.azurewebsites.net/contact", this.email_info)
       .then(function (response) {
