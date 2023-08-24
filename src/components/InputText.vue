@@ -1,7 +1,7 @@
 <template>
   <div id="InputText">
     <label class="input-label"> {{ label_text }}</label>
-    <input autocomplete="off" class="input-text" type="text" :id="id_name" :name="id_name">
+    <input autocomplete="off" class="input-text" type="text" :v-model="id_name" :id="id_name" :name="id_name">
   </div>
 </template>
 
