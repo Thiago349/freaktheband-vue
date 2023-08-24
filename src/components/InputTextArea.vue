@@ -1,7 +1,7 @@
 <template>
   <div id="InputTextArea">
     <label class="input-label"> {{ label_text }}</label>
-    <textarea autocomplete="off" rows=6 class="input-text-area" type="text" :v-model="id_name" :id="id_name" :name="id_name"></textarea>
+    <textarea autocomplete="off" rows=6 class="input-text-area" type="text" :v-model="v_model" :id="id_name" :name="id_name"></textarea>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
     props: {
       label_text: String,
       id_name: String,
+      v_model: String
     }
   }
 </script>

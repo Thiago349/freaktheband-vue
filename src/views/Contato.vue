@@ -26,29 +26,28 @@ import SubmitButton from '../components/SubmitButton.vue';
     name: 'ContatoPage',
     data() {
       return {
-        email_info: ""
+        email_info: {
+          name: "",
+          email: "",
+          subject: "",
+          content: "",
+        }
       }
     },
     components: { PageTitle, InputText, InputTextArea, SubmitButton },
     methods: { sendForm(event) {
       event.preventDefault();
-      this.email_info = {data: {name: document.getElementById("name").value,
-                          email: document.getElementById("email").value, 
-                          subject: document.getElementById("subject").value, 
-                          content: document.getElementById("content").value
-                          } }
-      console.log(this.email_info);
-      axios({method: "POST",
-            url: "https://freakapi.azurewebsites.net/contact",
-            headers: {"Content-Type": "application/json"},
-            data: this.email_info})
+      this.email_info.name = document.getElementById("name").value,
+      this.email_info.email = document.getElementById("email").value, 
+      this.email_info.subject = document.getElementById("subject").value, 
+      this.email_info.content = document.getElementById("content").value
+      axios.post('https://freakapi.azurewebsites.net/contact', this.email_info)
       .then(function (response) {
       console.log(response);
       })
       .catch(function (error) {
         console.log(error);
       });
-      console.log("Enviado!");
     }}
 }
 </script>
