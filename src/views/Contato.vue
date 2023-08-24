@@ -39,7 +39,8 @@ import SubmitButton from '../components/SubmitButton.vue';
                           }
       console.log(this.email_info);
       axios({method: "POST",
-            url: "https://freakapi.azurewebsites.net/contact", 
+            url: "https://freakapi.azurewebsites.net/contact",
+            headers: {"Content-Type": "application/json"},
             data: this.email_info})
       .then(function (response) {
       console.log(response);
