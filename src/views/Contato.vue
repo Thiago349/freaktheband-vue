@@ -2,11 +2,11 @@
   <div class="main-view" id="Contato">
     <PageTitle struct="Mande uma" distinguished="MENSAGEM!" description="Contacte a banda diretamente pela caixa abaixo!"></PageTitle>
     <div class="content-wrapper">
-      <form id="form" action="https://freakapi.azurewebsites.net/contact" method="post">
+      <form id="form" action="" @submit="sendForm" method="post">
         <InputText label_text="Nome" id_name="name"></InputText>
         <InputText label_text="E-mail" id_name="email"></InputText>
         <InputText label_text="Assunto" id_name="subject"></InputText>
-        <InputTextArea label_text="Mensagem" id_name="email-content"></InputTextArea>
+        <InputTextArea label_text="Mensagem" id_name="email_content"></InputTextArea>
         <SubmitButton label_text="Enviar"></SubmitButton>
       </form>
     <div class="contact-display">
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import PageTitle from '../components/PageTitle.vue';
 import InputText from '../components/InputText.vue';
 import InputTextArea from '../components/InputTextArea.vue';
@@ -24,6 +25,17 @@ import SubmitButton from '../components/SubmitButton.vue';
   export default {
     name: 'ContatoPage',
     components: { PageTitle, InputText, InputTextArea, SubmitButton },
+    methods: { sendForm(event) {
+      event.preventDefault();
+      axios.post("https://freakapi.azurewebsites.net/contact", { name: document.getElementById("name"), email: document.getElementById("email"), subject: document.getElementById("subject"), email_content: document.getElementById("email-content")})
+      .then(function (response) {
+      console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      console.log("Enviado!");
+    }}
 }
 </script>
 
