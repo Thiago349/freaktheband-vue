@@ -32,7 +32,7 @@ import SubmitButton from '../components/SubmitButton.vue';
     components: { PageTitle, InputText, InputTextArea, SubmitButton },
     methods: { sendForm(event) {
       event.preventDefault();
-      this.email_info = { name: document.getElementById("name"), email: document.getElementById("email"), subject: document.getElementById("subject"), email_content: document.getElementById("email-content")}
+      this.email_info = { name: document.getElementById("name").innerHTML, email: document.getElementById("email").innerHTML, subject: document.getElementById("subject").innerHTML, email_content: document.getElementById("email_content").innerHTML}
       console.log(this.email_info);
       axios.post("https://freakapi.azurewebsites.net/contact", this.email_info)
       .then(function (response) {
