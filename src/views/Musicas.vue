@@ -98,7 +98,7 @@ const styles = getComputedStyle(document.documentElement);
     border: solid var(--light) 2px;
     border-radius: 15px;
     width: 100%;
-    min-height: 70vh;
+    min-height: 67.5vh;
     margin: 0px 10px;
   }
 
