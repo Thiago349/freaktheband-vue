@@ -49,4 +49,15 @@
   .input-text:hover {
     box-shadow: 0 0 10px 0 rgb(81, 203, 238);
   }
+
+  @media (max-width: 1100px) {
+    #InputText {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-text {
+      width: 90%;
+    }
+  }
 </style>

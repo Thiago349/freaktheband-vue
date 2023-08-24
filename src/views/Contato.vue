@@ -32,9 +32,9 @@ import SubmitButton from '../components/SubmitButton.vue';
     components: { PageTitle, InputText, InputTextArea, SubmitButton },
     methods: { sendForm(event) {
       event.preventDefault();
-      this.email_info = { name: document.getElementById("name").value, email: document.getElementById("email").value, subject: document.getElementById("subject").value, content: document.getElementById("content").value}
+      this.email_info = {"data": {name: document.getElementById("name").value, email: document.getElementById("email").value, subject: document.getElementById("subject").value, content: document.getElementById("content").value}}
       console.log(this.email_info);
-      axios.post("https://freakapi.azurewebsites.net/contact", this.email_info)
+      axios.post("freakapi.azurewebsites.net/contact", this.email_info)
       .then(function (response) {
       console.log(response);
       })
@@ -79,6 +79,12 @@ import SubmitButton from '../components/SubmitButton.vue';
   .content-wrapper {
     flex-direction: column;
     align-items: center;
+    height: fit-content;
+  }
+
+  #form {
+    min-height: 100%;
+    width: 100%;
   }
 }
 </style>
