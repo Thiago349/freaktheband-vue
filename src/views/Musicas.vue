@@ -9,7 +9,7 @@
       </div>
       <div id="display-music">
         <img id="music-image">
-        <h3 id="music-text"> Selecione uma música! </h3>
+        <h3 id="music-text">Selecione uma música!</h3>
       </div>
     </div>
   </div>

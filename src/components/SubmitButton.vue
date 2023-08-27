@@ -23,8 +23,10 @@
     transition: 0.5s;
   }
 
+@media (min-width: 1100px) {
   .submit-btn:hover {
     background-color: var(--light);
     color: var(--dark-grey);
   }
+}
 </style>

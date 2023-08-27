@@ -43,10 +43,12 @@ import SubmitButton from '../components/SubmitButton.vue';
       this.email_info.content = document.getElementById("content").value
       axios.post('https://freakapi.azurewebsites.net/contact', this.email_info)
       .then(function (response) {
-      console.log(response);
+        console.log(response);
+        alert("Mensagem enviada, obrigado!");
       })
       .catch(function (error) {
         console.log(error);
+        alert("Falha no envio!");
       });
     }}
 }
