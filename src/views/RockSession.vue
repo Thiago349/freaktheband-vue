@@ -109,7 +109,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 90vw;
   margin: auto;
@@ -122,11 +122,12 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   background-color: var(--dark-grey);
   border: solid var(--ice) 2px;
   border-radius: 15px;
-  width: 70vw;
+  min-height: 85vh;
+  width: 75vw;
   padding: 10px;
   transition: 0.5s;
 }
@@ -134,7 +135,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
 #display-buttons {
   box-sizing: border-box;
   align-items: center;
-  height: 95vh;
+  height: 85vh;
   padding: 10px;
 }
 
@@ -143,8 +144,8 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30vh;
-  height: 30vh;
+  width: 25vh;
+  height: 25vh;
   padding: 2.5px;
 }
 
@@ -204,6 +205,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
 
 #description {
   height: fit-content;
+  align-self: center;
 }
 
 #guests {
