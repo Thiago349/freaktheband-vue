@@ -28,6 +28,7 @@
 
 body {
   background: radial-gradient(circle, var(--dark-grey) 100%, var(--dark-grey) 100%);
+  min-height: 100vh;
   overflow-y: hidden;
 }
 
