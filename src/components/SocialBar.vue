@@ -32,7 +32,7 @@ var activated = 0;
     align-items: center;
     background-color: var(--dark-grey);
     width: 100%;
-    height: 5vh;
+    height: 5dvh;
   }
 
   #SocialBar img {

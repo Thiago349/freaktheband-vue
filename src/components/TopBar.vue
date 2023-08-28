@@ -130,7 +130,7 @@ var activated = 0
     }
 
     #TopBar img {
-      height: 10vh;
+      height: 10dvh;
     }
 
     ul {
@@ -147,7 +147,7 @@ var activated = 0
     }
 
     .btn-top-bar {
-      height: 10vh;
+      height: 10dvh;
     }
   }
 </style>

@@ -67,14 +67,14 @@ p, input {
   border: 2px solid var(--ice);
   border-top: none;
   width: 95vw;
-  height: 85vh;
+  height: 85dvh;
   margin: 0 2.5vw;
 }
 
 .content-wrapper {
   box-sizing: border-box;
   display: flex;
-  padding-bottom: calc(2.5vh - 2px);
+  padding-bottom: calc(2.5dvh - 2px);
 }
 
 ::-webkit-scrollbar {
@@ -96,7 +96,7 @@ p, input {
   }
 
   .main-view {
-    height: 80vh;
+    height: 85dvh;
   }
 }
 </style>
