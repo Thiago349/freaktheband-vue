@@ -127,7 +127,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   border: solid var(--ice) 2px;
   border-radius: 15px;
   width: 70vw;
-  min-height: 95vh;
   padding: 10px;
   transition: 0.5s;
 }
@@ -239,19 +238,6 @@ img {
   margin-left: 15px;
 }
 
-::-webkit-scrollbar {
-  width: 15px;
-  background-color: var(--ice);
-  border-radius: 5px;
-}
-
-/* Make scrollbar visible when needed */
-::-webkit-scrollbar-thumb {
-  background-color: var(--dark-grey);
-  border: solid var(--ice) 2px;
-  border-radius: 5px;
-}
-
 @media (min-width:1100px) {
   #band-insta:hover, #guest-insta:hover {
     border: solid var(--light) 2px;
@@ -346,17 +332,14 @@ img {
     }
 
     ::-webkit-scrollbar {
-      height: 15px;
-      background-color: var(--ice);
+      width: 15px;
       border-radius: 0.5px;
-
     }
 
     /* Make scrollbar visible when needed */
     ::-webkit-scrollbar-thumb {
       background-color: var(--dark-grey);
       border: solid 2px var(--ice);
-      border-radius: 0.5px;
     }
 }
 </style>

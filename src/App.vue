@@ -4,15 +4,17 @@
       <div id="main-div">
         <router-view/>
       </div>
+      <SocialBar></SocialBar>
     </div>
 </template>
 
 <script>
   import TopBar from './components/TopBar.vue';
+  import SocialBar from './components/SocialBar.vue';
 
   export default {
     name: "MainPage",
-    components: { TopBar }
+    components: { TopBar, SocialBar }
 }
 </script>
 
@@ -26,6 +28,7 @@
 
 body {
   background: radial-gradient(circle, var(--dark-grey) 100%, var(--dark-grey) 100%);
+  overflow-y: hidden;
 }
 
 h1 {
@@ -65,7 +68,6 @@ p, input {
   width: 95vw;
   height: 85vh;
   margin: 0 2.5vw;
-  margin-bottom: 2.5vh;
 }
 
 .content-wrapper {
@@ -90,6 +92,10 @@ p, input {
   .content-wrapper {
     padding: 2.5vw;
     padding-top: 0;
+  }
+
+  .main-view {
+    height: 80vh;
   }
 }
 </style>

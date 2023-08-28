@@ -141,7 +141,6 @@ const styles = getComputedStyle(document.documentElement);
 
     ::-webkit-scrollbar {
       width: 15px;
-      background-color: var(--dark-grey);
       border-radius: 0.5px;
     }
 
