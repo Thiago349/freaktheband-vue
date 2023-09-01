@@ -7,7 +7,7 @@
           <button @click="change_music" class="btn music-btn" v-bind:id="music"> {{ music }} </button>
         </div>
       </div>
-      <div id="display-music">
+      <div id="display-music" class="main-card">
         <img id="music-image">
         <h3 id="music-text">Selecione uma música!</h3>
       </div>
@@ -95,8 +95,6 @@ const styles = getComputedStyle(document.documentElement);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid var(--light) 2px;
-    border-radius: 15px;
     width: 100%;
     min-height: 67.5vh;
     margin: 0px 10px;

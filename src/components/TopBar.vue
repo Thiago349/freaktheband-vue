@@ -54,7 +54,7 @@ var activated = 0
     background-color: var(--dark-grey);
     border-bottom: solid var(--ice) 2px;
     width: 100%;
-    height: 10vh;
+    height: 10dvh;
   }
 
   #TopBar img {

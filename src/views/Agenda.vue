@@ -2,7 +2,7 @@
   <div class="main-view" id="Agenda">
     <PageTitle struct="Confira nossa" distinguished="AGENDA!" description="Fique por dentro de todos os próximos eventos da banda!"></PageTitle>
     <div class="content-wrapper">
-      <div id="dates" class="calendar">
+      <div id="dates" class="calendar main-card">
         <div class="calendarheader">
           <button id = "prevyear" @click="change_year">&lt;</button>
           <h3 id = "calendaryear">2023</h3>
@@ -24,7 +24,7 @@
           <button v-for="index in 42" :key="index" v-bind:id="index+'day'" @click="select_day">{{ index }}</button>
         </ul>
       </div>
-      <div class="calendar">
+      <div class="calendar main-card">
         <div class="calendarheader">
           <h3 id = "chosendaytitle">Selecione um dia</h3>
         </div>
@@ -225,9 +225,6 @@ function update_dates(data, year, month) {
 }
 
 .calendar {
-  background-color: var(--dark-grey);
-  border: var(--ice) solid 2px;
-  border-radius: 25px;
   width: 60vh;
   padding: 2vh;
   margin: 0px 20px;

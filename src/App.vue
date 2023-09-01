@@ -30,6 +30,7 @@ body {
   background: radial-gradient(circle, var(--dark-grey) 100%, var(--dark-grey) 100%);
   height: 100dvh;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -71,6 +72,13 @@ p, input {
   margin: 0 2.5vw;
 }
 
+.main-card {
+  background-color: var(--dark-grey);
+  border: 2px solid var(--ice);
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+
 .content-wrapper {
   box-sizing: border-box;
   display: flex;
@@ -96,7 +104,7 @@ p, input {
   }
 
   .main-view {
-    height: 85dvh;
+    height: 87.5dvh;
   }
 }
 </style>

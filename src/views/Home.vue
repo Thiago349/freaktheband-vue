@@ -2,8 +2,8 @@
   <div class="main-view" id="Home">
     <PageTitle struct="Bem-vindo ao site da" distinguished="FREAK!" description="Saiba mais sobre o quarteto de Rock N' Roll belo-horizontino!"></PageTitle>
     <div class="content-wrapper">  
-        <img id="main-img" src="../assets/main_img.jpeg">
-        <div id="news">
+        <img id="main-img" class="main-card" src="../assets/main_img.jpeg">
+        <div id="news" class="main-card">
             <h2 id="news-title">Novidades</h2>
         </div>
     </div>
@@ -47,8 +47,6 @@
 }
 
 #main-img {
-    border: solid var(--ice) 2px;
-    border-radius: 15px;
     width: auto;
     height: 67.5vh;
     margin: 0 2.5vh;
@@ -57,9 +55,6 @@
 #news {
     display: flex;
     flex-direction: column;
-    background-color: var(--dark-grey);
-    border: solid var(--ice) 2px;
-    border-radius: 15px;
     height: 67.5vh;
     margin: 0 2.5vh;
     padding: 10px;

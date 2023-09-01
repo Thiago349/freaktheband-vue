@@ -2,27 +2,27 @@
   <div class="main-view" id="RockSession">
     <PageTitle struct="Conheça o" distinguished="ROCK SESSION!" description="Descubra o que é o nosso evento e como foram as edições anteriores!"></PageTitle>
     <div class="content-wrapper">
-      <div id="display-info">
-        <div id="description" class="info-box">
+      <div id="display-info" class="main-card">
+        <div id="description" class="info-box main-card">
           <h3 class="topics">SOBRE</h3>
           <p id="event-description">O Rock Session é um evento organizado pela Freak! e é imperdível para a galera do rock em Belo Horizonte! O objetivo é nos unir e abrir espaço para outras bandas e músicos, proporcionando uma noite de muita música de qualidade pra todo mundo!</p>
           <img src="../assets/freak_white.png" id="rs-logo">
         </div>
         <div id="guests">
-          <div class="info-box">
+          <div class="info-box main-card">
             <div class="split">
               <h3 class="topics">BANDA CONVIDADA</h3>
-              <a id="band-insta" target="_blank"><img :src="require('../assets/RS/Instagram.png')"></a>
+              <a id="band-insta" target="_blank"><img :src="require('../assets/Instagram.png')"></a>
             </div>
             <div class="split">
               <p id="band-description">A cada edição, convidamos uma banda incrível para participar do evento, trazendo diferentes lados do Rock N' Roll pra galera!</p>
               <img id="band-logo" src="../assets/RS/BandSilhouette.png">
             </div>
           </div>
-          <div class="info-box">
+          <div class="info-box main-card">
             <div class="split">
               <h3 class="topics">PARTICIPAÇÃO ESPECIAL</h3>
-              <a id="guest-insta" target="_blank"><img :src="require('../assets/RS/Instagram.png')"></a>
+              <a id="guest-insta" target="_blank"><img :src="require('../assets/Instagram.png')"></a>
             </div>
             <div class="split">
               <p id="guest-description">Sempre reservamos espaço para participações especiais surpreendentes, trazendo artistas talentosos para dividir o palco com a gente!</p>
@@ -65,13 +65,16 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
       change_event(event) {
         if (chosen_rs != ""){
           document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ styles.getPropertyValue('--dark-grey') }`;
+          document.getElementById(chosen_rs).firstChild.style.boxShadow = ""
         }
         var rs_number = event.target.parentNode.id;
         chosen_rs = rs_number;
         document.getElementById(chosen_rs).firstChild.style.border = `solid 2px ${ rs_colors[rs_number][1] }`;
+        document.getElementById(chosen_rs).firstChild.style.boxShadow = `0 0 10px 0 ${ rs_colors[rs_number][1] }`;
         document.getElementById("rs-logo").src = require("@/assets/RS/" + rs_number + ".svg");
         document.getElementById("display-info").style.backgroundColor = rs_colors[rs_number][0];
         document.getElementById("display-info").style.borderColor = rs_colors[rs_number][1];
+        document.getElementById("display-info").style.boxShadow = `0 0 10px 0 ${ rs_colors[rs_number][1] }`;
         var class_elements = document.getElementsByClassName("topics");
         for (var class_ind = 0; class_ind < class_elements.length; class_ind++) {
           class_elements[class_ind].style.color = rs_colors[rs_number][1];
@@ -79,6 +82,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
         class_elements = document.getElementsByClassName("info-box");
         for (class_ind = 0; class_ind < class_elements.length; class_ind++) {
           class_elements[class_ind].style.borderColor = rs_colors[rs_number][1];
+          class_elements[class_ind].style.boxShadow = `0 0 10px 0 ${ rs_colors[rs_number][1] }`;
         }
         rs_number = Number(rs_number.replace("RS", "")) - 1;
         document.getElementById("event-description").innerHTML = data[rs_number][1];
@@ -122,10 +126,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: start;
-  background-color: var(--dark-grey);
-  border: solid var(--ice) 2px;
-  border-radius: 15px;
+  align-items: center;
   min-height: 85vh;
   width: 75vw;
   padding: 10px;
@@ -147,6 +148,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   width: 25vh;
   height: 25vh;
   padding: 2.5px;
+  margin: 2.5px;
 }
 
 .rs-button {
@@ -161,9 +163,6 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--dark-grey);
-  border: solid var(--ice) 2px;
-  border-radius: 15px;
   height: fit-content;
   margin: 20px 0px;
   padding: 20px;
