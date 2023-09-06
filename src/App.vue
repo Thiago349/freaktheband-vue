@@ -76,7 +76,7 @@ p, input {
   background-color: var(--dark-grey);
   border: 2px solid var(--ice);
   border-radius: 15px;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.75);
 }
 
 .content-wrapper {

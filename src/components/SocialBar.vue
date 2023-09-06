@@ -33,7 +33,7 @@ var activated = 0;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
   #SocialBar {
     position: absolute;
     bottom: -5vh;
@@ -52,11 +52,16 @@ var activated = 0;
     height: 5dvh;
     padding: 5px;
     margin: 0px 20px;
+    transition: transform 0.5s ease-in-out;
   }
 
   #SocialBar:hover {
     bottom: 0;
     border-top: 2px solid var(--ice);
+  }
+
+  #SocialBar:hover > #logo-img {
+    transform: rotateZ(180deg);
   }
 
   .contact-medias {

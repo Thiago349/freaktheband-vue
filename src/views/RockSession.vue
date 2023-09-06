@@ -127,7 +127,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 85vh;
+  min-height: 80vh;
   width: 75vw;
   padding: 10px;
   transition: 0.5s;
@@ -136,7 +136,7 @@ const rs_colors = {"RS1": ['#F9E4BD', '#AB160B'], "RS2": ['#613285', '#25E781'],
 #display-buttons {
   box-sizing: border-box;
   align-items: center;
-  height: 85vh;
+  height: 80vh;
   padding: 10px;
 }
 
