@@ -15,8 +15,6 @@
 <script>
 //const styles = getComputedStyle(document.documentElement);
 var activated = 0;
-
-
   export default {
     name: 'SocialBar',
     methods: {
@@ -99,7 +97,6 @@ var activated = 0;
   }
 
   .social-img:hover {
-    background-color: var(--dark);
     padding: 0px;
   }
 

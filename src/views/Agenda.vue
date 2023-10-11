@@ -10,7 +10,7 @@
         </div>
         <div class="calendarheader">
           <button id = "prevmonth" @click="change_month">&lt;</button>
-          <h3 id = "calendarmonth">Agosto</h3>
+          <h3 id = "calendarmonth">Setembro</h3>
           <button id = "nextmonth" @click="change_month">&gt;</button>
         </div>
         <ul>
@@ -65,7 +65,7 @@ export default {
           }
           if (this.selected_day == "") {
             this.selected_day = event.target.id;
-            document.getElementById(event.target.id).style.border = `solid 2px ${ styles.getPropertyValue('--ice') }`;
+            document.getElementById(event.target.id).style.border = `solid 2px ${ styles.getPropertyValue('--blue') }`;
             document.getElementById("chosendaytitle").innerHTML = `Dia ${ event.target.innerHTML }`;
           }
           else if (this.selected_day == event.target.id) {
@@ -78,7 +78,7 @@ export default {
           else {
             document.getElementById(this.selected_day).style.border = 'solid 2px transparent';
             this.selected_day = event.target.id;
-            document.getElementById(event.target.id).style.border = `solid 2px ${ styles.getPropertyValue('--ice') }`;
+            document.getElementById(event.target.id).style.border = `solid 2px ${ styles.getPropertyValue('--blue') }`;
             document.getElementById("chosendaytitle").innerHTML = `Dia ${ event.target.innerHTML }`;
           }
         }
@@ -323,9 +323,9 @@ ul button {
   font-size: 16px;
   border: none;
   border-radius: 25%;
-  width: 7vh;
-  height: 7vh;
-  margin: auto 0.2vh;
+  width: 6.2vh;
+  height: 6.2vh;
+  margin: 0.4vh;
 }
 
 .notcurrent {

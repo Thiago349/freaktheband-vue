@@ -2,7 +2,8 @@
   <div class="main-view" id="Home">
     <PageTitle struct="Bem-vindo ao site da" distinguished="FREAK!" description="Saiba mais sobre o quarteto de Rock N' Roll belo-horizontino!"></PageTitle>
     <div class="content-wrapper">  
-        <img id="main-img" class="main-card" src="../assets/main_img.jpeg">
+        <ImgCarousel id="main-img" class="main-card"></ImgCarousel>
+        <!-- img id="main-img" class="main-card" src="../assets/main_img.jpeg" -->
         <div id="news" class="main-card">
             <h2 id="news-title">Novidades</h2>
         </div>
@@ -13,6 +14,7 @@
 <script>
   import axios from 'axios';
   import PageTitle from '../components/PageTitle.vue'
+  import ImgCarousel from '../components/ImgCarousel.vue'
   export default {
     name: 'HomePage',
     methods: {
@@ -35,7 +37,7 @@
     created() {
         this.getResponse(); 
     },
-    components: { PageTitle }
+    components: { PageTitle, ImgCarousel }
 }
 </script>
 

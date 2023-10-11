@@ -24,6 +24,7 @@
   --dark: #050a30;
   --ice: #e2e8f0;
   --dark-grey: #010101;
+  --blue: #2020ff;
 }
 
 body {
