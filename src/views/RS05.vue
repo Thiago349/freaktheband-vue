@@ -2,7 +2,7 @@
   <div class="main-view" id="RS05">
     <PageTitle struct="Lançamento de Lillith" distinguished="ROCK SESSION 05" description="Clique no vídeo abaixo e conheça o maior evento de Rock N Roll jovem de BH!"></PageTitle>
     <div class="content-wrapper">
-      <iframe scrolling="no" class="styled-iframe" src="https://www.youtube.com/watch?v=yxdrbNdJ8Ug&t" allowfullscreen></iframe>
+      <iframe scrolling="no" class="styled-iframe" src="https://www.youtube.com/embed/watch?v=yxdrbNdJ8Ug&t" allowfullscreen></iframe>
       <StyledButton label_text="SYMPLA"></StyledButton>
     </div>
   </div>
