@@ -20,11 +20,11 @@
 
 <style>
 :root {
-  --light: #CAE8FF;
-  --dark: #050a30;
+  --light: #ffcaca;
+  --dark: #300505;
   --ice: #e2e8f0;
   --dark-grey: #010101;
-  --blue: #2020ff;
+  --blue: #940000;
 }
 
 body {
@@ -62,7 +62,7 @@ p, input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: radial-gradient(circle, rgb(0, 0, 40) 30%, rgb(0, 0, 30) 60%);
+  background: radial-gradient(circle, rgb(40, 0, 0) 30%, rgb(30, 0, 0) 60%);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   box-sizing: border-box;

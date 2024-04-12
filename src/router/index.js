@@ -5,6 +5,7 @@ import AgendaPage from '../views/Agenda.vue'
 import RockSessionPage from '../views/RockSession.vue'
 import MusicasPage from '../views/Musicas.vue'
 import ContatoPage from '../views/Contato.vue'
+import RS05Page from '../views/RS05.vue'
 
 
 Vue.use(VueRouter)
@@ -39,6 +40,11 @@ const routes = [
     path: '/contato',
     name: 'ContatoPage',
     component: ContatoPage,
+  },
+  {
+    path: '/RS05',
+    name: 'RS05Page',
+    component: RS05Page,
   },
 ]
 
