@@ -2,7 +2,7 @@
   <div class="main-view" id="RS05">
     <PageTitle struct="Lançamento de Lillith" distinguished="ROCK SESSION 05" description="Clique no vídeo abaixo e conheça o maior evento de Rock N Roll jovem de BH!"></PageTitle>
     <div class="content-wrapper">
-      <iframe scrolling="no" class="styled-iframe" src="https://www.youtube.com/embed/watch?v=yxdrbNdJ8Ug&t" allowfullscreen></iframe>
+      <iframe class="styled-iframe" src="https://www.youtube.com/embed/3c-YHNb5-hs?si=biAe2Q5a0VipXlot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <StyledButton label_text="SYMPLA"></StyledButton>
     </div>
   </div>
@@ -39,7 +39,10 @@
 
 .styled-iframe {
   width: calc(64vw);
-  height: calc(36vw);
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  border: solid 5px var(--ice);
+  background-color: var(--dark-grey);
   overflow: hidden;
 }
 
