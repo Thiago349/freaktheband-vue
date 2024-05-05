@@ -38,10 +38,9 @@
   align-items: center;
   background: radial-gradient(circle, rgb(40, 0, 0) 30%, rgb(30, 0, 0) 60%);
   box-sizing: border-box;
-  border: 2.5px solid var(--ice);
   border-top: none;
   border-bottom: none;
-  width: 95vw;
+  width: 100vw;
   height: 100dvh;
 }
 

@@ -57,7 +57,7 @@ p, input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: radial-gradient(circle, rgb(40, 0, 0) 30%, rgb(30, 0, 0) 60%);
+  background: var(--dark-grey);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   box-sizing: border-box;
