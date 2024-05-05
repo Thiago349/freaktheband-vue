@@ -1,20 +1,15 @@
 <template>
     <div id="app">
-      <TopBar></TopBar>
       <div id="main-div">
         <router-view/>
       </div>
-      <SocialBar></SocialBar>
     </div>
 </template>
 
 <script>
-  import TopBar from './components/TopBar.vue';
-  import SocialBar from './components/SocialBar.vue';
-
   export default {
     name: "MainPage",
-    components: { TopBar, SocialBar }
+    components: {}
 }
 </script>
 
