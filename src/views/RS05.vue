@@ -1,6 +1,6 @@
 <template>
   <div class="main-rs" id="RS05">
-    <PageTitle struct="Lançamento de Lillith" distinguished="ROCK SESSION 05" description="Clique no vídeo abaixo e conheça o maior evento de ROCK de BH!"></PageTitle>
+    <PageTitle struct="Lançamento de Lillith" distinguished="ROCK SESSION 05"></PageTitle>
     <div class="content">
       <iframe class="styled-iframe" src="https://www.youtube.com/embed/AJ2AkwruBCM?si=Y6CpKE5eIblhcw05" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <StyledButton label_text="SYMPLA"></StyledButton>

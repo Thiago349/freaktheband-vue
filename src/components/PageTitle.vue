@@ -4,7 +4,6 @@
       <h1 id="struct">{{ struct }}&nbsp;</h1>
       <h1 id="distinguished">{{ distinguished }}</h1>
     </div>
-    <p id="subtitle">{{ description }}</p>
   </div>
 </template>
 
@@ -14,7 +13,6 @@
     props: {
       struct: String,
       distinguished: String,
-      description: String
     }
   }
 </script>
